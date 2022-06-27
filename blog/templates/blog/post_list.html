@@ -13,17 +13,14 @@
         <h1>Amanda's Blog</h1>
     </header>
 
+    {% for post in posts %}    
     <article>
-        <time>published: June 26,2022, 1:47pm</time>
-        <h2>Another First</h2>
-        <p>Gosh Mom… after all these years, God's not going to take a call from you. I was set up. By the Brits. A group of British builders operating outside the O.C.</p>
+        <time>published: {{ post.published_date }}</time>
+        <h2><a href="">{{ post.title }}</a></h2>
+        <p>{{ post.text|linebreaksbr }}</p>
     </article>
+    {% endfor %}
 
-    <article>
-        <time>published: June 26, 2022, 1:49pm</time>
-        <h2>In Need of Vacation</h2>
-        <p>Oh, I'm sorry, I forgot… your wife is dead! I'm sure Egg is a great person. Did you enjoy your lunch, mom? You drank it fast enough. They don't appreciate him. It's his glasses… they make him look like a lizard. Plus he's self-conscious.</p>
-    </article>
 </body>
 
 </html>
