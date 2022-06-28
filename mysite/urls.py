@@ -17,6 +17,6 @@ from django.contrib import admin
 from django.urls import path, include
 
 urlpatterns = [
-    path('admin/', admin.site.urls), #This line means that for every URL that starts with admin/, Django will find a corresponding view
+    path('admin/', admin.site.urls),
     path('', include('blog.urls')),
 ]
